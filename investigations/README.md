@@ -2,7 +2,7 @@
 
 Documented security alert investigations simulating real SOC analyst workflows.
 
-## Focus Areas
+## Topics Covered
 - Alert triage
 - Log analysis
 - Priority classification
