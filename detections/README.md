@@ -1,12 +1,9 @@
-# Splunk Detection & Analysis
+# Detection Engineering 🛡️
 
-This section contains searches, dashboards, and detection logic created using Splunk SPL.
+This section contains detection logic and analysis used to identify malicious activity in logs.
 
-## Skills Demonstrated
-- SPL queries
-- Event correlation
-- Failed login detection
-- Brute force pattern analysis
-- Log aggregation
-
-Goal: demonstrate real-world SIEM investigation capability
+Skills demonstrated:
+- Pattern recognition
+- Log parsing
+- Threat detection logic
+- Command-line log analysis
