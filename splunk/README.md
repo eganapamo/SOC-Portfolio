@@ -1,14 +1,9 @@
-# Splunk Analysis
+# Splunk Analysis 📊
 
-Hands-on labs focused on security monitoring and detection using Splunk.
+This section showcases SPL queries, dashboards, and detection searches built during security investigations.
 
-## Topics Covered
-- SPL queries
+Skills demonstrated:
+- SPL query writing
 - Event correlation
-- Alert analysis
-- Dashboard creation
-
-## Skills Demonstrated
-- Detecting brute-force attempts
-- Investigating login anomalies
-- Analyzing authentication logs
+- Alert logic
+- Security monitoring workflows
