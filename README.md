@@ -2,12 +2,12 @@
 This portfolio demonstrates hands-on SOC analyst skills through real detection labs, incident investigations, threat intelligence analysis, and Splunk projects.
 
 Skills demonstrated:
-• Log analysis (Linux, IDS, JSON parsing)
-• Detection engineering
-• Incident triage & investigation
-• Threat intelligence correlation
-• Vulnerability analysis
-• Splunk SPL & dashboards
+- Log analysis (Linux, IDS, JSON parsing)
+- Detection engineering
+- Incident triage & investigation
+- Threat intelligence correlation
+- Vulnerability analysis
+- Splunk SPL & dashboards
 
 Each folder represents real analyst workflows and contains documented exercises with methodology, commands used, analysis, and remediation steps.
 
