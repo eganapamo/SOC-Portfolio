@@ -1,11 +1,10 @@
-Linux Log Analysis Lab 🧠
+SSH Brute Force Investigation
 
-Objective:  
-The goal for me was to identify brute-force SSH attempts using Linux command-line tools.
-
+## InvestigationSummary
+Detected repeated failed SSH login attempts followed by a successful login from the same IP address. Investigation confirmed brute-force behavior.
 ---
 
-🔍 Scenario
+## Event Details
 
 I am a SOC analyst reviewing authentication logs on a Linux server.  
 I suspected repeated failed SSH login attempts coming from a single IP address.
@@ -22,15 +21,15 @@ Oct 5 13:45:11 server sshd[2231]: Accepted password for root from 192.168.56.105
 
 ---
 
-🧰 Commands Used
+## Evidence Collection Steps
 
-1️⃣ Count Failed Login Attempts
+ Count Failed Login Attempts
 
 grep "Failed password" /var/log/auth.log | wc -l
 
 This command counts the total number of failed SSH logins.
 
-2️⃣ Identify Top Offending IPs
+ Identify Top Offending IPs
 
 grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr
 
@@ -42,7 +41,7 @@ grep "Accepted password" /var/log/auth.log
 
 Oct  5 13:45:11 server sshd[2231]: Accepted password for root from 192.168.56.105 port 58937 ssh2
 
-🧩 Analysis
+## Analyst Conclusion
 
 I identified that IP 192.168.56.105 had three failed SSH attempts before one successful login — a classic brute-force pattern.
 
@@ -51,6 +50,6 @@ Disable root SSH login
 Configure fail2ban to block repeated login attempts
 Enforce stronger passwords and lockout policies
 
-🧠 Lesson Learned
+## Analyst Notes
 
-This exercise helped me strengthen my ability to detect brute-force activity through raw log analysis, one of the core skills tested on the CySA+ exam and expected in a real SOC
+This exercise helped me strengthen my ability to detect brute-force activity through raw log analysis.
