@@ -8,7 +8,7 @@ This repository documents my learning and hands-on labs while preparing for the 
 ---
 
 ## 📂 Folder Structure
-- **detections/** → grep, awk, jq, Suricata, and IDS logs  
+- **detection-labs/** → grep, awk, jq, Suricata, and IDS logs  
 - **splunk-dashboards/** → custom detections and searches  
 - **incident-response/** → documentation templates and reports  
 - **threat-intel/** → STIX/TAXII examples and indicators  
