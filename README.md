@@ -1,28 +1,4 @@
-# cysa-portfolio
-Hands-on CySA+ labs, scripts, and analysis notes — documenting my cybersecurity learning journey.
-# CySA+ Cybersecurity Portfolio 🛡️
+# SOC Analyst Porfolio - Evans Ganapamo
+This repository showcases hands-on cybersecurity labs, detection engineering exercises, incident investigations, and Splunk analysis projects.
+It demonstrates practical SOC analyst skills including log analysis, alert triage, threat detection, and incident documentation.
 
-Welcome!  
-This repository documents my learning and hands-on labs while preparing for the **CompTIA CySA+ (CS0-003)** certification.
-
----
-
-## 📂 Folder Structure
-- **detections/** → grep, awk, jq, Suricata, and IDS logs  
-- **investigations/** → custom detections and searches  
-- **splunk/** → documentation templates and reports  
-- **threat-intel/** → STIX/TAXII examples and indicators  
-- **vuln-management/** → scan outputs and summaries  
-
----
-
-## 🧠 Current Focus
-- Practicing Linux log analysis  
-- Building Splunk dashboards  
-- Preparing for CySA+ PBQs  
-
----
-
-## 📫 Contact
-**Evans Ganapamo**  
-LinkedIn: [linkedin.com/in/evansganapamo](https://linkedin.com/in/evansganapamo)
