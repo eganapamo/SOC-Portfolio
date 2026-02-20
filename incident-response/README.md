@@ -1,4 +1,4 @@
-# Incident Response 🚨
+# Incidet Response 🚨
 Documentation of investigation steps, evidence handling, and containment recommendations.
 
 **Templates**
