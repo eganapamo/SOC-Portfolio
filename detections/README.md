@@ -1,8 +1,12 @@
-# Log Analysis 🧠
-This section contains CySA+-related exercises for log review and pattern recognition.
+# Splunk Detection & Analysis
 
-**Topics covered**
-- Linux commands: `grep`, `awk`, `uniq`, `sort`
-- IDS/IPS logs (Suricata, Snort)
-- Log parsing with `jq` (JSON data)
-- Detecting brute-force, port-scan, and malware activity
+This section contains searches, dashboards, and detection logic created using Splunk SPL.
+
+## Skills Demonstrated
+- SPL queries
+- Event correlation
+- Failed login detection
+- Brute force pattern analysis
+- Log aggregation
+
+Goal: demonstrate real-world SIEM investigation capability
