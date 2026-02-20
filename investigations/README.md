@@ -1,14 +1,9 @@
-# Investigations 
+# Incident Investigations 🔎
 
-Documented security alert investigations simulating real SOC analyst workflows.
+This section contains real investigation walkthroughs documenting analysis steps, evidence, and conclusions.
 
-## Topics Covered
-- Alert triage
-- Log analysis
-- Priority classification
+Skills demonstrated:
+- Event triage
+- Evidence analysis
 - Incident validation
-
-## Skills Demonstrated
-- Determining threat severity
-- Investiging suspicious activity
-- Writing analyst conclusions
+- Security reasoning
