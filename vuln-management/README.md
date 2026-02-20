@@ -1,7 +1,13 @@
-# Vulnerability Scans 🔍
-Practice outputs and analysis from vulnerability-assessment tools.
+# Vulnerability Management Labs
 
-**Tools**
+This section documents vulnerability scanning exercises and remediation analysis.
+
+## Tools Used
 - OpenVAS / Greenbone
-- Nessus community edition
-- Remediation documentation
+- Nessus (Community Edition)
+
+## Skills Demonstrated
+- Scan result interpretation
+- Risk prioritization
+- Remediation recommendations
+- Report writing
