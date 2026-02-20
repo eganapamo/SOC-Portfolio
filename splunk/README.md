@@ -1,7 +1,14 @@
-# Splunk Dashboards 📊
-This section includes searches, alerts, and dashboards created while preparing for CySA+.
+# Splunk Analysis
 
-**Focus areas**
-- Search Processing Language (SPL)
-- Correlating security events
-- Creating incident alerts and reports
+Hands-on labs focused on security monitoring and detection using Splunk.
+
+## Topics Covered
+- SPL queries
+- Event correlation
+- Alert analysis
+- Dashboard creation
+
+## Skills Practiced
+- Detecting brute-force attempts
+- Investigating login anomalies
+- Analyzing authentication logs
