@@ -8,7 +8,7 @@ Hands-on labs focused on security monitoring and detection using Splunk.
 - Alert analysis
 - Dashboard creation
 
-## Skills Practiced
+## Skills Demonstrated
 - Detecting brute-force attempts
 - Investigating login anomalies
 - Analyzing authentication logs
