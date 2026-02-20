@@ -1,11 +1,9 @@
-# Threat Intelligence Analysis
+# Threat Intelligence 🕵️
 
-This section contains notes and exercises related to threat intelligence collection and analysis.
+Examples of threat research, IOC analysis, and intelligence correlation.
 
-## Topics Covered
-- Indicators of Compromise (IOCs)
-- Threat feed analysis
-- STIX / TAXII fundamentals
-- IOC correlation
-
-Purpose: show understanding of attacker infrastructure and detection context.
+Skills demonstrated:
+- IOC validation
+- Threat attribution
+- Indicator enrichment
+- Intelligence analysis
