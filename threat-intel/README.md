@@ -1,7 +1,11 @@
-# Threat Intelligence 🕵️‍♂️
-Hands-on notes and examples for collecting, analyzing, and sharing indicators of compromise.
+# Threat Intelligence Analysis
 
-**Key standards**
-- STIX / TAXII examples
-- IOC correlation
+This section contains notes and exercises related to threat intelligence collection and analysis.
+
+## Topics Covered
+- Indicators of Compromise (IOCs)
 - Threat feed analysis
+- STIX / TAXII fundamentals
+- IOC correlation
+
+Purpose: show understanding of attacker infrastructure and detection context.
