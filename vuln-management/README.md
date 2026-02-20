@@ -1,13 +1,9 @@
-# Vulnerability Management Labs
+# Vulnerability Management 🔍
 
-This section documents vulnerability scanning exercises and remediation analysis.
+Scan analysis, remediation planning, and vulnerability prioritization exercises.
 
-## Tools Used
-- OpenVAS / Greenbone
-- Nessus (Community Edition)
-
-## Skills Demonstrated
-- Scan result interpretation
-- Risk prioritization
-- Remediation recommendations
-- Report writing
+Skills demonstrated:
+- Risk assessment
+- CVSS interpretation
+- Remediation strategy
+- Security prioritization
