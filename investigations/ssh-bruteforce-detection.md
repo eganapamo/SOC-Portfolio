@@ -1,6 +1,6 @@
 SSH Brute Force Investigation
 
-## InvestigationSummary
+## Executive Summary
 Detected repeated failed SSH login attempts followed by a successful login from the same IP address. Investigation confirmed brute-force behavior.
 ---
 
@@ -50,6 +50,6 @@ Disable root SSH login
 Configure fail2ban to block repeated login attempts
 Enforce stronger passwords and lockout policies
 
-## Analyst Notes
+## Lessons Learned
 
 This exercise helped me strengthen my ability to detect brute-force activity through raw log analysis.
