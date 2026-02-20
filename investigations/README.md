@@ -1,4 +1,4 @@
-# Investigations 🚨
+# Investigations 
 
 Documented security alert investigations simulating real SOC analyst workflows.
 
