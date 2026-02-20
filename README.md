@@ -1,21 +1,43 @@
-# SOC Analyst Porfolio - Evans Ganapamo
-This portfolio demonstrates hands-on SOC analyst skills through real detection labs, incident investigations, threat intelligence analysis, and Splunk projects.
+# SOC Analyst Portfolio — Evans Ganapamo
 
-Skills demonstrated:
+This repository showcases hands-on SOC analyst work simulating real-world detection, investigation, and response scenarios using industry tools and methodologies.
+
+It demonstrates practical blue-team capabilities including log analysis, threat detection, incident validation, and remediation planning.
+
+---
+
+## Core Skills Demonstrated
 - Log analysis (Linux, IDS, JSON parsing)
 - Detection engineering
-- Incident triage & investigation
+- Incident triage and investigation
 - Threat intelligence correlation
-- Vulnerability analysis
-- Splunk SPL & dashboards
+- Vulnerability assessment
+- Splunk SPL queries and dashboards
 
-Each folder represents real analyst workflows and contains documented exercises with methodology, commands used, analysis, and remediation steps.
+---
 
-## Analyst Mindset
+## Workflow Methodology
+All labs follow a real SOC analyst workflow:
 
-All labs follow real SOC workflow methodology:
 1. Detect
 2. Investigate
 3. Analyze
-4. Conclude
-5. Recommend remediation
+4. Validate
+5. Recommend Remediation
+
+---
+
+## Portfolio Structure
+
+| Folder | Purpose |
+|------|--------|
+| detections | Detection logic and pattern analysis |
+| investigations | Full incident investigations |
+| splunk | SPL queries, dashboards, detections |
+| threat-intel | IOC analysis and enrichment |
+| vuln-management | Vulnerability assessment labs |
+
+---
+
+## Objective
+Build production-ready SOC analyst skills and document practical security investigations aligned with real security operations center workflows.
