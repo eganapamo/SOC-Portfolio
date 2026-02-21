@@ -1,3 +1,5 @@
+## Lab 6 - SSH Brute-Force Attack Investigation
+
 ## Objective
 Identify brute-force SSH login attempts using Linux authentication logs.
 
