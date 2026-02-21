@@ -1,3 +1,6 @@
+## Lab 1 - Failed Login Detection
+
+
 ## Objective
 Analyze authentication logs to identify which fields contain attacker usernames and IP addresses during failed login attempts.
 
