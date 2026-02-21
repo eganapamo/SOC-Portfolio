@@ -1,3 +1,5 @@
+## Lab - 4 Timestamp Analysis
+
 ## Objective
 Determine whether failed SSH login attempts were automated or manual by analyzing timestamp patterns in authentication logs.
 
