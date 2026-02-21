@@ -1,4 +1,4 @@
-## Lab 1 - failed login field analysis
+## Lab 1 - Failed Login Field Analysis
 
 
 ## Objective
