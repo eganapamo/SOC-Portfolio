@@ -24,21 +24,11 @@ Purpose:
 Identify when each failed login occurred.
 
 
-## Step 3 — Normalize Timestamp Precision
-Remove microseconds and timezone values so events can be compared by second.
-
-grep "Failed password" /var/log/auth.log | awk '{print $1}' | sed 's/\..*//'
-
-Purpose:
-Ensure timestamps can be grouped accurately.
-
-
-## Step 4 — Count Attempts Per Timestamp
+## Step 3 — Count Attempts Per Timestamp
 Group login attempts by timestamp and count occurrences.
 
-grep "Failed password" /var/log/auth.log \
-| awk '{print $1}' \
-| sed 's/\..*//' \
+grep "Failed password" /var/log/auth.log
+| awk '{print $1}'
 | sort | uniq -c | sort -nr
 
 
@@ -68,12 +58,6 @@ However:
 
 ## Security Insight
 Timing patterns provide valuable attacker intelligence.
-
-| Pattern | Meaning |
-|--------|--------|
-Multiple attempts same second | Automated brute force |
-Steady intervals | Scripted attack |
-Irregular spacing | Manual or throttled attack |
 
 
 ## Conclusion
