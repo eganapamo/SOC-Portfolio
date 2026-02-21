@@ -1,5 +1,3 @@
-# Lab 04 — Extracting Attacker IP from Auth Logs
-
 ## Objective
 Identify attacker IP addresses responsible for failed login attempts using regex extraction and log parsing.
 
