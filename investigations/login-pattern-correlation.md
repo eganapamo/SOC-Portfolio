@@ -1,3 +1,5 @@
+## Lab 7 - Login Pattern Correlation Analysis
+
 ## Objective
 Identify relationships between failed login attempts by correlating timestamp, username, and source IP address.
 
