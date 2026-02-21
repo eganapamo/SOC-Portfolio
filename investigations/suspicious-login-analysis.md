@@ -1,5 +1,3 @@
-# Suspicious Login Investigation Lab
-
 ## Objective
 Detect possible brute-force compromise by analyzing authentication logs.
 
