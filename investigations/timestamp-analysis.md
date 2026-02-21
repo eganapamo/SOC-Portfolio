@@ -3,7 +3,6 @@ Determine whether failed SSH login attempts were automated or manual by analyzin
 
 
 ## Log Source
-```
 /var/log/auth.log
 
 
