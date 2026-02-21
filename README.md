@@ -1,4 +1,4 @@
-# SOC Analyst Investigation Portfolio — Evans Ganapamo
+# SOC Analyst Investigation Portfolio
 
 This repository showcases hands-on SOC analyst work simulating real-world detection, investigation, and response scenarios using industry tools and methodologies.
 
