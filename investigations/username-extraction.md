@@ -1,3 +1,5 @@
+## Lab - 3 Username Extraction
+
 ## Objective
 Identify which usernames attackers attempted to log into by extracting the username field from failed SSH login attempts.
 
