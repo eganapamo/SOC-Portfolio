@@ -1,5 +1,3 @@
-# Failed Login Log Field Analysis
-
 ## Objective
 Analyze authentication logs to identify which fields contain attacker usernames and IP addresses during failed login attempts.
 
