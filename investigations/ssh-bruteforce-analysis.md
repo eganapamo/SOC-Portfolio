@@ -21,14 +21,14 @@ While reviewing authentication logs on a Linux system, multiple failed login att
 
 ### Count Failed Login Attempts
 ```
-grep "Failed password" /var/log/auth.log | wc -l
+grep -a "Failed password" /var/log/auth.log | wc -l
 ```
 
 ---
 
 ### Identify Source IPs With Most Failures
 ```
-grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr
+grep -a "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr
 ```
 
 ---
