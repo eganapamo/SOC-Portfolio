@@ -9,14 +9,13 @@ Identify attacker IP addresses responsible for failed login attempts using regex
 
 
 ## Step 1 — Find Failed Logins
-```bash
+
 grep "Failed password" /var/log/auth.log
 
 
 ## Step 2 — Extract Only IP Addresses
 Used extended regex to isolate IPv4 addresses:
 
-```bash
 grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' /var/log/auth.log
 
 ### Explanation
@@ -27,7 +26,6 @@ grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' /var/log/auth.log
 
 
 ## Step 3 — Sort + Count Attempts Per IP
-```bash
 grep "Failed password" /var/log/auth.log \
 | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' \
 | sort | uniq -c | sort -nr
