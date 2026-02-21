@@ -1,4 +1,4 @@
-## Lab 4 - IP Address Extraction
+## Lab 2 - IP Extraction
 
 ## Objective
 Identify attacker IP addresses responsible for failed login attempts using regex extraction and log parsing.
