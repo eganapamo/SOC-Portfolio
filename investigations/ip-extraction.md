@@ -19,10 +19,10 @@ Used extended regex to isolate IPv4 addresses:
 grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' /var/log/auth.log
 
 ### Explanation
-- `-E` → enables extended regex
-- `-o` → prints only matching values
-- `([0-9]{1,3}\.){3}` → first 3 octets with dots
-- `[0-9]{1,3}` → last octet
+- -E → enables extended regex
+- -o → prints only matching values
+- ([0-9]{1,3}\.){3} → first 3 octets with dots
+- [0-9]{1,3} → last octet
 
 
 ## Step 3 — Sort + Count Attempts Per IP
