@@ -1,4 +1,4 @@
-## Lab 08 — Targeted Username Detection
+# Lab 08 — Targeted Username Detection
 
 ## Objective
 Identify which usernames attackers attempted to access during failed SSH login attempts.
