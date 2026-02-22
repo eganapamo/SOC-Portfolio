@@ -1,4 +1,4 @@
-## Lab 2 - IP Extraction
+# Lab 2 - IP Extraction
 
 ## Objective
 Identify attacker IP addresses responsible for failed login attempts using regex extraction and log parsing.
@@ -18,7 +18,7 @@ Used extended regex to isolate IPv4 addresses:
 
 grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' /var/log/auth.log
 
-### Explanation
+## Explanation
 - -E → enables extended regex
 - -o → prints only matching values
 - ([0-9]{1,3}\.){3} → first 3 octets with dots
