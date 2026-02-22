@@ -1,4 +1,4 @@
-## Lab - 6 Suspicious Login Analysis
+# Lab - 6 Suspicious Login Analysis
 
 ## Objective
 Detect possible brute-force compromise by analyzing authentication logs.
