@@ -1,4 +1,4 @@
-## Lab 5 - Login Pattern Correlation
+# Lab 5 - Login Pattern Correlation
 
 ## Objective
 Identify relationships between failed login attempts by correlating timestamp, username, and source IP address.
