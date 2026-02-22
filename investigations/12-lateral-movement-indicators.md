@@ -20,10 +20,6 @@ grep -a -i "from" /var/log/auth.log | awk '{print $11}' | sort | uniq -c
 grep -a -i "from" /var/log/auth.log | awk '{print $11}' | sort | uniq -c | sort -nr
 
 
-# Step 4 — Cleaner production version (removes blank fields)
-grep -a -i "from" /var/log/auth.log | awk '{print $11}' | grep -v '^$' | sort | uniq -c | sort -nr
-
-
 # Findings:
 69 entries contained no IP value in field 11
 3 entries originated from ::1
