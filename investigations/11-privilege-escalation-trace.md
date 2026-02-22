@@ -36,9 +36,9 @@ Orders all privilege escalation activity by time.
 ## Findings
 Example Output:
 
-2025-10-06T14:03:40 USER=root COMMAND=/usr/bin/systemctl 
-2025-10-06T14:04:44 USER=root COMMAND=/usr/bin/grep 
-2025-10-06T14:06:11 USER=root COMMAND=/usr/bin/journalctl 
+- 2025-10-06T14:03:40 USER=root COMMAND=/usr/bin/systemctl 
+- 2025-10-06T14:04:44 USER=root COMMAND=/usr/bin/grep 
+- 2025-10-06T14:06:11 USER=root COMMAND=/usr/bin/journalctl 
 
 
 ## Analysis
