@@ -32,7 +32,7 @@ grep -a "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uni
 ## Analysis
 Log review identified repeated failed SSH login attempts from a single source.
 
-Multiple authentication failures originating from one IP address is a common indicator of brute-force attack activity. In this lab environment, the source IP was localhost (::1), confirming the activity was simulated.
+Multiple authentication failures originating from one IP address is a common indicator of brute-force attack activity. In my lab environment, the source IP was localhost (::1), confirming the activity was simulated.
 
 This pattern reflects real-world attack behavior where attackers repeatedly attempt password guesses against exposed SSH services.
 
