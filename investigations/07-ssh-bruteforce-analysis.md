@@ -1,4 +1,4 @@
-## Lab 7 - SSH Brute-Force Analysis
+# Lab 7 - SSH Brute-Force Analysis
 
 ## Objective
 Identify brute-force SSH login attempts using Linux authentication logs.
