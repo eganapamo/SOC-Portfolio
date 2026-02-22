@@ -40,7 +40,7 @@ Counts how many times each username was targeted.
 ## Analysis
 - Username **fakeuser** was targeted most frequently.
 - Multiple attempts indicate credential guessing or brute-force activity.
-- Entry `;` is a parsing artifact from a differently formatted log line.
+- Entry ; is a parsing artifact from a differently formatted log line.
 
 ---
 
