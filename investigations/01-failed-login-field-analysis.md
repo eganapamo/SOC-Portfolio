@@ -19,7 +19,7 @@ Confirmed presence of failed login attempts.
 grep -a "Failed password" /var/log/auth.log | wc -l
 
 Result:
-4
+- 4
 
 
 ## Step 3 — Determine Field Structure
@@ -46,9 +46,9 @@ Confirmed:
 grep -a "Failed password" /var/log/auth.log | awk '{print $9}'
 
 Output:
-fakeuser
-fakeuser
-fakeuser
+- fakeuser
+- fakeuser
+- fakeuser
 
 
 ## Step 5 — Identify Source IP Field
@@ -58,9 +58,9 @@ Command:
 grep -a "Failed password" /var/log/auth.log | awk '{print $11}'
 
 Output:
-::1
-::1
-::1
+- ::1
+- ::1
+- ::1
 
 
 ## Analyst Conclusion
@@ -81,7 +81,6 @@ Repeated failed attempts from same username and IP indicate brute-force activity
 - Command-line investigation
 - Security reasoning
 
----
 
 ## Analyst Notes
 This lab strengthened understanding of log field structures and how attackers appear within authentication logs. Correct field identification is critical for building accurate detection logic and SIEM queries.
