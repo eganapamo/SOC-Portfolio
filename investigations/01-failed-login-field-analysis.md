@@ -29,7 +29,7 @@ grep -a "Failed password" /var/log/auth.log | awk '{print NF, $0}'
 
 Result showed:
 
-14 fields per log entry
+- 14 fields per log entry
 
 
 ## Step 4 — Identify Username Field
