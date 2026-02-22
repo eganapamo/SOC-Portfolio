@@ -58,7 +58,7 @@ Determines time gaps between attempts to evaluate attack type.
 
 | Metric | Result |
 |------|-------|
-Targeted Username | `fakeuser`
+Targeted Username | fakeuser
 Source IP | ::1
 Failed Attempts | 3
 Successful Logins | 0
