@@ -6,7 +6,7 @@ Identify all login attempts (failed + successful), determine targeted usernames,
 
 
 ## Log Source
-`/var/log/auth.log`
+/var/log/auth.log
 
 
 ## Step 1 — Extract All Login Attempts
@@ -59,7 +59,7 @@ Determines time gaps between attempts to evaluate attack type.
 | Metric | Result |
 |------|-------|
 Targeted Username | `fakeuser`
-Source IP | `::1`
+Source IP | ::1
 Failed Attempts | 3
 Successful Logins | 0
 Time Gaps | 4–11 seconds
@@ -68,7 +68,7 @@ Behavior Type | Manual login attempts |
 
 ## Analysis
 
-The source IP `::1` generated multiple failed login attempts against the username **fakeuser**. 
+The source IP ::1 generated multiple failed login attempts against the username **fakeuser**. 
 No successful authentication events were observed.
 
 Timing intervals between attempts varied slightly (4–11 seconds), indicating **manual interaction** rather than automated brute-force tooling, which typically shows:
@@ -80,11 +80,11 @@ Timing intervals between attempts varied slightly (4–11 seconds), indicating *
 
 ## Conclusion
 
-The activity originated from the local host (`::1`) and appears to be manually generated login attempts targeting a non-existent user. While not a confirmed compromise, this pattern is consistent with early reconnaissance or testing behavior and should be flagged for monitoring.
+The activity originated from the local host (::1) and appears to be manually generated login attempts targeting a non-existent user. While not a confirmed compromise, this pattern is consistent with early reconnaissance or testing behavior and should be flagged for monitoring.
 
 
 ## Analyst Notes
-- IPv6 localhost (`::1`) indicates activity originated from the same system.
+- IPv6 localhost (::1) indicates activity originated from the same system.
 - Lack of successful login attempts suggests no account compromise occurred.
 - Low attempt volume + irregular timing strongly indicates manual execution.
 
