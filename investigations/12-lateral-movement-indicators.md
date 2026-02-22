@@ -21,14 +21,14 @@ grep -a -i "from" /var/log/auth.log | awk '{print $11}' | sort | uniq -c | sort 
 
 
 # Findings:
-69 entries contained no IP value in field 11
-3 entries originated from ::1
+- 69 entries contained no IP value in field 11
+- 3 entries originated from ::1
 
 
 # Analysis:
-::1 is the IPv6 loopback address (local system).
-All authentication attempts originated locally.
-No external source IPs detected.
+- ::1 is the IPv6 loopback address (local system).
+- All authentication attempts originated locally.
+- No external source IPs detected.
 
 
 # Conclusion:
