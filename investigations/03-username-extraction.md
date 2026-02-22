@@ -45,9 +45,9 @@ Example output:
 
 
 ## Interpretation
-• Attackers attempted login using username "fakeuser" 
-• Repeated attempts indicate brute-force or enumeration behavior 
-• Username targeting suggests attacker is testing common or guessed accounts
+- Attackers attempted login using username "fakeuser" 
+- Repeated attempts indicate brute-force or enumeration behavior 
+- Username targeting suggests attacker is testing common or guessed accounts
 
 
 ## Analyst Conclusion
@@ -56,8 +56,8 @@ Attacker is attempting to identify valid accounts before password attack phase.
 
 
 ## Skills Practiced
-• Log analysis 
-• Field extraction 
-• Pattern recognition 
-• Attack behavior identification 
-• Bash pipelines 
+- Log analysis 
+- Field extraction 
+- Pattern recognition 
+- Attack behavior identification 
+- Bash pipelines 
