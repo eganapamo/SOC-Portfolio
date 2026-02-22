@@ -1,4 +1,4 @@
-# 11 — Privilege Escalation Trace
+# Lab 11 — Privilege Escalation Trace
 
 ## Objective
 Identify privilege escalation activity by detecting sudo usage and commands executed as root from authentication logs.
