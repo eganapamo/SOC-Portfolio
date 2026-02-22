@@ -1,4 +1,4 @@
-## Lab - 3 Username Extraction
+# Lab - 3 Username Extraction
 
 ## Objective
 Identify which usernames attackers attempted to log into by extracting the username field from failed SSH login attempts.
@@ -11,24 +11,24 @@ grep "Failed password" /var/log/auth.log
 ## Step 2 — Determine Username Field Position
 grep "Failed password" /var/log/auth.log | head -1
 
-# Manually count fields
-# Example structure:
-# Oct 10 04:04:24 kali sshd[64162]: Failed password for invalid user fakeuser from ::1 port 60870 ssh2
+## Manually count fields
+## Example structure:
+- Oct 10 04:04:24 kali sshd[64162]: Failed password for invalid user fakeuser from ::1 port 60870 ssh2
 
-# Field breakdown example:
-# 1=Oct
-# 2=10
-# 3=04:04:24
-# 4=kali
-# 5=sshd[64162]:
-# 6=Failed
-# 7=password
-# 8=for
-# 9=invalid
-# 10=user
-# 11=fakeuser
+## Field breakdown example:
+- 1=Oct
+- 2=10
+- 3=04:04:24
+- 4=kali
+- 5=sshd[64162]:
+- 6=Failed
+- 7=password
+- 8=for
+- 9=invalid
+- 10=user
+- 11=fakeuser
 
-# Username field = $11
+- Username field = $11
 
 
 ## Step 3 — Extract Only Usernames
