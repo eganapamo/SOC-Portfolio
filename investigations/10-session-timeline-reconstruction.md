@@ -25,10 +25,10 @@ Extracts the timestamp field (field $1) from each failed login event to rebuild 
 
 ## Findings
 Output:
-2025-10-06T14:04:24.568432-04:00
-2025-10-06T14:04:29.015654-04:00
-2025-10-06T14:04:33.199329-04:00
-2025-10-06T14:04:44.026617-04:00
+- 2025-10-06T14:04:24.568432-04:00
+- 2025-10-06T14:04:29.015654-04:00
+- 2025-10-06T14:04:33.199329-04:00
+- 2025-10-06T14:04:44.026617-04:00
 
 
 ## Timeline Gap Analysis
@@ -43,7 +43,6 @@ Approximate gaps between attempts:
 - Events are seconds apart and not perfectly uniform.
 - This timing pattern is more consistent with manual attempts than automated brute force (which often produces rapid or highly consistent intervals).
 
----
 
 ## Conclusion
 The failed authentication events form a short session timeline with irregular spacing, indicating a likely manual attempt sequence rather than automation.
