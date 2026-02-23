@@ -9,7 +9,7 @@ Identify the most suspicious source IPs based on failed SSH authentication attem
 ## Step 1 — Filter failed login events
 grep -a "Failed password" /var/log/auth.log
 
-## Step 2 — Extract source IP addresses (field may vary by environment; in this lab it's $11)
+## Step 2 — Extract source IP addresses (field may vary by environment; in my lab it's $11)
 grep -a "Failed password" /var/log/auth.log | awk '{print $11}'
 
 ## Step 3 — Count failed attempts by IP (rank highest first)
@@ -38,7 +38,7 @@ grep -a "Failed password" /var/log/auth.log \
 
 
 
-## Findings (example from your lab context):
+## Findings (example from my lab context):
 Suspicious IP: ::1 (3 failed attempts)
 
 ## Analysis:
