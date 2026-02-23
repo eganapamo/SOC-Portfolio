@@ -1,4 +1,4 @@
-# Lab 15 — Privilege Escalation Alert Rule Creation
+# Lab 2 — Privilege Escalation Alert Rule Creation
 
 ## Objective
 Detect privilege escalation activity by identifying commands executed as root using sudo.
