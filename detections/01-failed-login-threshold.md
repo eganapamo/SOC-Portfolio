@@ -1,4 +1,4 @@
-# Lab 14 — Failed Login Threshold Detection
+# Lab 1 — Failed Login Threshold Detection
 
 ## Objective:
 Identify IP addresses responsible for 3 or more failed login attempts.
