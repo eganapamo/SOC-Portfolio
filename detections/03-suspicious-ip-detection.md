@@ -1,4 +1,4 @@
-# Lab 16 — Suspicious IP Detection
+# Lab 3 — Suspicious IP Detection
 
 ## Objective:
 Identify the most suspicious source IPs based on failed SSH authentication attempts, then optionally enrich by showing which usernames each IP targeted.
