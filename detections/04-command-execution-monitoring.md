@@ -1,4 +1,4 @@
-# Lab 17 — Command Execution Monitoring
+# Lab 4 — Command Execution Monitoring
 
 ## Objective:
 Detect commands executed with elevated privileges and identify potentially suspicious administrative activity.
