@@ -1,4 +1,4 @@
-# Lab 18 — Persistence Detection
+# Lab 5 — Persistence Detection
 
 ## Objective:
 Identify signs of attacker persistence by detecting account modifications, password changes, or privilege manipulation events in authentication logs.
