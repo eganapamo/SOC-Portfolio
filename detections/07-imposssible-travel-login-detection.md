@@ -4,14 +4,14 @@
 Detect “impossible travel” behavior by identifying the same user account logging in from different source IP addresses within an unrealistically short time window.
 
 ## Detection Strategy
-1. Extract successful SSH logins (`Accepted password`) from `/var/log/auth.log`.
+1. Extract successful SSH logins (Accepted password) from /var/log/auth.log.
 2. Pull out:
    - Timestamp
    - Username
    - Source IP
 3. Convert the timestamp to **seconds since midnight** so logins can be compared numerically.
 4. Group by user and look for **multiple source IPs** occurring close together (example threshold: ≤ 1 hour).  
-   > In your data, the same user (`kali`) logs in twice from the same IP (`192.168.56.1`). This is a *baseline* run that proves the logic works. When you have multiple IPs, this method will flag the “impossible travel” pattern.
+   > In your data, the same user (kali) logs in twice from the same IP (192.168.56.1). This is a *baseline* run that proves the logic works. When you have multiple IPs, this method will flag the “impossible travel” pattern.
 
 ## Detection Command (full pipeline)
 grep -a "Accepted password" /var/log/auth.log \
