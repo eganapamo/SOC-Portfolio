@@ -7,12 +7,12 @@ Detect unauthorized account creation events in Linux by analyzing authentication
 ## Scenario
 
 - An alert indicates that a new user account may have been created on the system. 
-- The goal is to confirm whether a new user was added, identify the username, and extract relevant metadata from `/var/log/auth.log`.
+- The goal is to confirm whether a new user was added, identify the username, and extract relevant metadata from /var/log/auth.log.
 
 
 ## Step 1 – Search for Account Creation Events
 
-- We searched for `adduser` and `useradd` events inside the authentication log.
+- We searched for adduser and useradd events inside the authentication log.
 
 sudo grep -aiE "adduser|useradd" /var/log/auth.log | grep -iv "command"
 
@@ -53,8 +53,8 @@ From the log entry:
 
 ## Analysis
 
-- Account was created using `useradd`
-- Executed from local terminal (`pts/1`)
+- Account was created using useradd
+- Executed from local terminal (pts/1)
 - No remote IP observed
 - No bulk account creation
 - No immediate privilege escalation detected in this event
@@ -63,7 +63,7 @@ On its own, this event is not automatically malicious.
 However, in a real-world SOC environment, the following pivots would be required:
 
 - 1. Identify who executed `useradd`
-- 2. Determine whether `sudo` was used
+- 2. Determine whether sudo was used
 - 3. Check if the new user was added to privileged groups (sudo, admin, wheel)
 - 4. Review subsequent login activity
 - 5. Investigate any post-creation privilege escalation
@@ -75,11 +75,11 @@ This lab demonstrates how to:
 
 - Detect account creation events in auth logs
 - Remove command noise from log searches
-- Extract specific log fields using `awk`
+- Extract specific log fields using awk
 - Perform initial triage on account creation alerts
 
 
 ## Conclusion
 
-A new user account `labuser` was successfully detected through log analysis. 
+A new user account labuser was successfully detected through log analysis. 
 The extraction and filtering process reduced noise and isolated relevant indicators, simulating real SOC workflow for unauthorized account creation detection.
