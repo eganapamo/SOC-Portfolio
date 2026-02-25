@@ -62,7 +62,7 @@ From the log entry:
 On its own, this event is not automatically malicious. 
 However, in a real-world SOC environment, the following pivots would be required:
 
-- 1. Identify who executed `useradd`
+- 1. Identify who executed useradd
 - 2. Determine whether sudo was used
 - 3. Check if the new user was added to privileged groups (sudo, admin, wheel)
 - 4. Review subsequent login activity
