@@ -7,7 +7,7 @@
 
 ## Environment
 - Host: kali
-- Log Source: `/var/log/auth.log`
+- Log Source: /var/log/auth.log
 - Event Focus: SSH authentication failures
 
 
@@ -38,9 +38,9 @@ Explanation:
 
 | Component | Meaning |
 |-----------|---------|
-| `for(i=1;i<=NF;i++)` | Loop through every word in the log line |
-| `$i=="from"` | Detect where the source indicator appears |
-| `$(i+1)` | Print the word after it (the IP address) |
+| for(i=1;i<=NF;i++) | Loop through every word in the log line |
+| $i=="from" | Detect where the source indicator appears |
+| $(i+1) | Print the word after it (the IP address) |
 
 Lab Output:
 
