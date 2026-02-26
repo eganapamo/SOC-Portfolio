@@ -24,7 +24,7 @@ Observed log pattern:
 Key observation:
 
 The IP address is NOT always in the same position because the log structure changes when phrases like invalid user appear.
-So we cannot safely use fixed fields like `$11`.
+So we cannot safely use fixed fields like $11.
 
 
 ## Step 2 — Extract Attacker IP Address (Field-Safe Method)
