@@ -20,7 +20,7 @@ This command filters authentication logs for activity involving execution tools 
 ## Step 2 – Analyze Output
 Review returned entries for evidence of command execution activity.
 
-## Observed Indicators:
+Observed Indicators:
 - shell=/bin/bash
 - Commands containing bash execution
 - Execution chains involving tools such as chmod, wget, curl, bash, or sh
@@ -30,7 +30,7 @@ These entries indicate that commands were actively run on the system rather than
 ## Step 3 – Correlate with Post-Access Behavior
 Reverse shell activity often follows successful access. Execution tools appearing in logs suggest the attacker may be interacting directly with the system.
 
-## Execution tools detected:
+Execution tools detected:
 - bash
 - sh
 - python
