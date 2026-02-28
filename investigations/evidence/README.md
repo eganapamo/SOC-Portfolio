@@ -5,11 +5,11 @@ Identify failed SSH login attempts and determine attacker patterns.
 
 ## Steps Performed
 
-1. Searched authentication logs for failed login attempts
-2. Extracted usernames involved in failed attempts
-3. Extracted source IP addresses
-4. Correlated usernames with IP addresses
-5. Calculated frequency of attempts
+- Searched authentication logs for failed login attempts
+- Extracted usernames involved in failed attempts
+- Extracted source IP addresses
+- Correlated usernames with IP addresses
+- Calculated frequency of attempts
 
 ## Findings
 - Multiple failed login attempts detected
