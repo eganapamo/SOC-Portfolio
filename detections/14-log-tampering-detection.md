@@ -20,7 +20,7 @@ Common log tampering techniques include:
 
 These commands represent defense evasion activity.
 
-## STEP 1 — Search for Log Tampering Indicators
+## Step 1 — Search for Log Tampering Indicators
 
 Command used:
 
@@ -35,7 +35,7 @@ Explanation:
 
 The pipe symbol ( | ) acts as OR logic to detect multiple tampering techniques in a single query.
 
-## STEP 2 — Analyze Results
+## Step 2 — Analyze Results
 
 Output displayed system-related entries such as:
 
@@ -54,7 +54,7 @@ No evidence of:
 
 was found in the log file.
 
-## STEP 3 — Differentiate Noise vs Signal
+## Step 3 — Differentiate Noise vs Signal
 
 Noise:
 Routine system operations such as authentication checks and GUI services.
