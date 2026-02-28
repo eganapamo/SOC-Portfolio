@@ -1,4 +1,4 @@
-# LAB 12 – Reverse Shell Indicator Detection
+# Lab 12 – Reverse Shell Indicator Detection
 
 ## Objective:
 Detect potential reverse shell activity by identifying execution tools commonly used by attackers after gaining access to a system. The goal is to uncover signs of command execution that indicate interactive control of the host.
