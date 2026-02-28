@@ -1,13 +1,13 @@
 # LAB 14 — Log Tampering Detection
 
-## Objectif:
+## Objective 
 Detect evidence of log tampering attempts by identifying commands commonly used by attackers to erase, modify, or disable logging activity after gaining access to a system.
 
-## Environment:
+## Environment
 Platform: Kali Linux
 Log Source: /var/log/auth.log
 
-## Background:
+## Background
 Attackers often attempt to remove traces of their activity after gaining access. This typically involves deleting logs, clearing command history, disabling history logging, or overwriting files.
 
 Common log tampering techniques include:
@@ -64,7 +64,7 @@ Commands showing intent to erase or modify logs.
 
 No malicious tampering indicators were observed.
 
-## Conclusion:
+## Conclusion
 
 The analysis did not reveal any log tampering activity.
 
