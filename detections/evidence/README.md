@@ -32,13 +32,13 @@ Evidence suggests a structured attack chain involving:
 
 
 ## Evidence Files
-- 01 → Initial access detection
-- 02 → Shell activity detection
-- 03 → File access detection
-- 04 → Privilege escalation detection
-- 05 → Persistence detection
-- 06 → Lateral movement detection
-- 07 → Log tampering detection
+- 01 → Initial access 
+- 02 → Execution
+- 03 → Privilege escalation 
+- 04 → Persistence
+- 05 → Discovery
+- 06 → Defense evasion (log tampering)
+- 07 → Lateral movement
 
 
 
