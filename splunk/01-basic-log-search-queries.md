@@ -79,15 +79,12 @@ Identify potential privilege escalation, persistence, or log tampering behavior.
    - attacker_ip (source of connection)
    - Splunk server (log storage)
 
-2. Importance of regex precision.
-   - Literal space vs \s+
-   - Why \s+ is more resilient in enterprise environments
 
-3. Splunk only sees what systems log.
+2. Splunk only sees what systems log.
    - No connection = no event
    - No log ingestion = no visibility
 
-4. Basic filtering and time range narrowing for investigation.
+3. Basic filtering and time range narrowing for investigation.
 
 
 ## Conclusion
