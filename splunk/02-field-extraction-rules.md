@@ -1,9 +1,9 @@
 # Lab 2 – Field Extraction Rules
 
-## Objective:
+## Objective
 The goal of this lab was to extract useful security fields from authentication logs in Splunk. Field extraction allows analysts to convert raw log data into structured information that can be easily searched, filtered, and analyzed during security investigations.
 
-## Environment:
+## Environment
 SIEM Platform: Splunk
 Log Source: Linux authentication logs (auth.log)
 Target System: Metasploitable
@@ -62,5 +62,5 @@ index=main "Accepted password"
 Result:
 The successful login event was identified along with the associated user account and source IP.
 
-## Conclusion:
+## Conclusion
 This lab demonstrated how field extraction allows analysts to transform raw authentication logs into structured fields such as username, source IP address, and network port. Extracting these fields improves investigative efficiency and allows analysts to correlate login activity, identify brute force attempts, and track attacker behavior across systems.
