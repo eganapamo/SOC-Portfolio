@@ -36,7 +36,7 @@ The usernames targeted during the brute force attempts were extracted and analyz
 
 Search:
 index=main sourcetype=syslog "Failed password"
-| rex "Failed password for (invalid user\s+)?(?<user>\S+)"
+| rex "Failed password for (invalid user\s+)?(?< user >\S+)"
 | stats count as failures by user
 | sort - failures
 | head 10
