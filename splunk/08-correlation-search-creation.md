@@ -128,6 +128,9 @@ Example output:
 attacker         usernames   target_host      failed_attempts   success_login
 192.168.56.104   msfadmin    192.168.56.102   9                 4
 
+## MITRE ATT&CK Mapping
+Technique: T1110-Brute Force
+Tactic: Credential access
 
 ## Analysis
 
