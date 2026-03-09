@@ -26,7 +26,7 @@ Execution of arbitrary commands allows attackers to control system operations an
 
 ## Recommended Response
 
-Review executed commands for malicious activity 
-Identify scripts or binaries launched by attacker 
-Monitor outbound network connections 
-Isolate affected systems if necessary
+- Review executed commands for malicious activity 
+- Identify scripts or binaries launched by attacker 
+- Monitor outbound network connections 
+- Isolate affected systems if necessary
