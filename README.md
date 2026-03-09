@@ -1,5 +1,9 @@
 # SOC Analyst Portfolio — Evans Ganapamo
 
+## Security Certifications:
+- CompTIA Security+
+- CompTIA CySA+
+
 This repository showcases hands-on cybersecurity labs demonstrating practical Security Operations Center (SOC) skills across investigation, detection engineering, SIEM analysis, threat intelligence, and vulnerability management.
 
 ## Portfolio Structure
