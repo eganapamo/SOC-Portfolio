@@ -28,7 +28,7 @@ Unauthorized privilege escalation could allow attackers to modify critical syste
 
 ## Recommended Response
 
-Review all sudo activity for the affected user 
-Validate legitimacy of privilege usage 
-Restrict sudo privileges where necessary 
-Monitor permission modification commands
+- Review all sudo activity for the affected user 
+- Validate legitimacy of privilege usage 
+- Restrict sudo privileges where necessary 
+- Monitor permission modification commands
