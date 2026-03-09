@@ -1,4 +1,4 @@
-# Splunk Evidence – Detection & Investigation Screenshots
+# Splunk Evidence
 
 This folder contains screenshots of Splunk search results used as evidence for the detections and investigations documented in this repository.
 
