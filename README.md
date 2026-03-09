@@ -6,12 +6,12 @@ This repository showcases hands-on cybersecurity labs demonstrating practical Se
 
 | Folder | Focus |
 |------|------|
-|SOC-incident investigations | 
-| detections | Detection rule engineering |
-| investigations | Incident analysis & log forensics |
-| splunk | SIEM analysis & hunting |
-| threat-intel | Intelligence workflows |
-| vuln-management | Risk & remediation analysis |
+|SOC-incident investigations | End-to-End incident response investigations |
+| Detections | Detection rule engineering |
+| Investigations | Incident analysis & log forensics |
+| Splunk | SIEM analysis & hunting |
+| Threat-Intel | Intelligence workflows |
+| Vuln-Management | Risk & remediation analysis |
 
 
 ## Core Skills Demonstrated
