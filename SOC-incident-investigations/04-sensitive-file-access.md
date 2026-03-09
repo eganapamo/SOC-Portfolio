@@ -34,7 +34,7 @@ Unauthorized access to credential files could allow attackers to escalate privil
 
 ## Recommended Response
 
-Audit file access logs 
-Restrict access permissions for sensitive files 
-Monitor repeated file access attempts 
-Implement file integrity monitoring
+- Audit file access logs 
+- Restrict access permissions for sensitive files 
+- Monitor repeated file access attempts 
+- Implement file integrity monitoring
