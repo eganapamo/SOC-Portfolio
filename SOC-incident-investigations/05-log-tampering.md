@@ -28,7 +28,7 @@ Log tampering can prevent defenders from identifying attacker activity and recon
 
 ## Recommended Response
 
-Preserve forensic copies of system logs 
-Investigate timeline of attacker activity 
-Restrict permissions to log files 
-Enable centralized log monitoring
+- Preserve forensic copies of system logs 
+- Investigate timeline of attacker activity 
+- Restrict permissions to log files 
+- Enable centralized log monitoring
