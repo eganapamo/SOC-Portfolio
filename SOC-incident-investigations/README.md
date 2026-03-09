@@ -4,11 +4,11 @@ This folder contains simulated SOC incident investigations based on log analysis
 
 Each investigation includes:
 
-• Detection query 
-• Investigation findings 
-• MITRE ATT&CK mapping 
-• Security impact analysis 
-• Incident response recommendations
+- Detection query 
+- Investigation findings 
+- MITRE ATT&CK mapping 
+- Security impact analysis 
+- Incident response recommendations
 
 ## Investigations
 
