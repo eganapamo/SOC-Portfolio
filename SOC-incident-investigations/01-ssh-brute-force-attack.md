@@ -32,8 +32,8 @@ Attacker successfully authenticated using compromised credentials and gained acc
 
 ## Recommended Response
 
-Block attacker IP at firewall or endpoint 
-Reset compromised account credentials 
-Review command execution logs after login 
-Check for persistence mechanisms 
-Enable multi-factor authentication
+- Block attacker IP at firewall or endpoint 
+- Reset compromised account credentials 
+- Review command execution logs after login 
+- Check for persistence mechanisms 
+- Enable multi-factor authentication
