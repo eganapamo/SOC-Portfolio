@@ -40,8 +40,8 @@ The typical threat intelligence workflow followed in these labs:
 
 The following threat intelligence platforms were used during investigations:
 
-• VirusTotal 
-• AbuseIPDB 
+- VirusTotal 
+- AbuseIPDB 
 
 These platforms provide reputation information that helps analysts determine whether an indicator is associated with malicious activity.
 
