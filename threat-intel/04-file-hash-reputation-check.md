@@ -1,84 +1,74 @@
-# Lab 4 – File Hash Reputation Check
+# Lab 4 – File Hash Reputation Investigation
 
 ## Objective
+The objective of this lab is to identify suspicious file hashes in system logs and determine whether the file is malicious by performing threat intelligence reputation checks using external intelligence sources such as VirusTotal.
 
-Analyze suspicious file hashes observed in system activity by checking their reputation using malware intelligence platforms.
+## Environment
+- Splunk Enterprise
+- Kali Linux
+- Metasploitable
+- Public threat intelligence platforms (VirusTotal)
 
-The goal is to determine whether the file hash corresponds to known malware or malicious software.
+## Step 1 – Identify Suspicious File Hashes in Logs
+Search the logs for potential file hashes that may appear in endpoint activity.
 
+Splunk Search:
+index=*
+| rex "(?<file_hash>[A-Fa-f0-9]{32,64})"
+| stats count by file_hash
+| sort -count
 
-## Scenario
+Explanation:
+This search extracts possible file hashes using regex and counts how many times each hash appears in the logs.
 
-During system monitoring or malware investigation, a suspicious file was identified.
+## Step 2 – Identify Unique File Hashes
+Identify hashes that appear rarely in the environment since uncommon hashes may indicate suspicious or newly introduced files.
 
-File hashes are commonly used to uniquely identify files and determine whether they match known malicious samples.
+Splunk Search:
+index=*
+| rex "(?<file_hash>[A-Fa-f0-9]{32,64})"
+| stats count by file_hash
+| sort count
 
-Example hash indicator:
+Explanation:
+Sorting by lowest count allows analysts to identify rare files that could be malicious.
 
-SHA256: example-file-hash
+## Step 3 – Select a Suspicious Hash
+Choose a hash value from the search results for further investigation.
 
+Example:
+44d88612fea8a8f36de82e1278abb02f
 
-## Data Source
+## Step 4 – Perform Threat Intelligence Lookup
+Investigate the hash using a threat intelligence platform.
 
-File hashes may be extracted from:
+Process:
+1. Open VirusTotal
+2. Paste the file hash into the search bar
+3. Review detection results and reputation
 
-- malware alerts
-- antivirus detections
-- file monitoring systems
-- endpoint detection tools
+Information gathered:
+- Malware classification
+- Number of security engines detecting the file
+- Behavior indicators
+- Malware family identification
 
-Threat intelligence platforms are used to determine whether the hash corresponds to known malware.
+## Step 5 – Determine Risk Level
+Based on the threat intelligence results determine whether the file is malicious or benign.
 
+Indicators of malicious activity include:
+- Multiple antivirus detections
+- Known malware family
+- Associated malicious behavior
 
-## Step 1 – Identify Suspicious File Hash
+## Analyst Assessment
+If the hash is flagged by multiple detection engines, the file should be considered malicious and investigated further.
 
-File hashes can be obtained from system logs, malware alerts, or endpoint monitoring tools.
-
-Example hash:
-
-example-file-hash
-
-
-## Step 2 – Perform Hash Reputation Lookup
-
-Check the file hash using malware intelligence platforms.
-
-Example sources:
-
-- VirusTotal 
-- Hybrid Analysis 
-- MalwareBazaar 
-- AlienVault OTX 
-
-These platforms provide information such as:
-
-- malware classification
-- detection rates
-- sandbox analysis results
-- associated malware families
-
-
-## Step 3 – Analyze Reputation Results
-
-Threat intelligence platforms may reveal:
-
-- antivirus detection results
-- malware family classification
-- behavior observed in sandbox environments
-- related malicious infrastructure
-
-This information helps analysts determine whether the file is malicious.
-
-
-## Findings
-
-Threat intelligence analysis determines whether the file hash corresponds to known malware samples.
-
-Malicious file hashes often appear in multiple malware databases and may have high detection rates across antivirus engines.
-
+Recommended actions:
+- Identify the host where the file executed
+- Isolate the affected system
+- Remove the malicious file
+- Investigate persistence or lateral movement activity
 
 ## Conclusion
-
-File hash reputation checks allow analysts to quickly determine whether a file is associated with known malware.
-
-This process enables security teams to identify malicious files and respond appropriately by isolating infected systems and removing malicious software.
+This lab demonstrated how to extract file hashes from logs, identify suspicious or rare files, and validate their reputation using threat intelligence platforms. File hash analysis is a critical step in malware detection and incident investigation within SOC environments.
