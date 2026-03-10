@@ -63,10 +63,10 @@ Investigate the extracted IP address using threat intelligence platforms.
 
 Example sources:
 
-• AbuseIPDB 
-• VirusTotal 
-• AlienVault OTX 
-• Cisco Talos Intelligence 
+- AbuseIPDB 
+- VirusTotal 
+- AlienVault OTX 
+- Cisco Talos Intelligence 
 
 These platforms provide information about known malicious infrastructure.
 
@@ -75,11 +75,11 @@ These platforms provide information about known malicious infrastructure.
 
 Threat intelligence platforms provide information such as:
 
-• Abuse reports associated with the IP 
-• Malware infrastructure connections 
-• Command and control activity 
-• Historical attack campaigns 
-• Geographic location and ASN ownership 
+- Abuse reports associated with the IP 
+- Malware infrastructure connections 
+- Command and control activity 
+- Historical attack campaigns 
+- Geographic location and ASN ownership 
 
 Analysts use this information to determine whether the IP address has been associated with malicious activity.
 
@@ -90,15 +90,15 @@ Combine log data with reputation intelligence.
 
 Observed behavior from logs:
 
-• Multiple failed SSH authentication attempts 
-• Repeated login attempts targeting system accounts 
+- Multiple failed SSH authentication attempts 
+- Repeated login attempts targeting system accounts 
 
 Threat intelligence enrichment determines whether the IP has been associated with:
 
-• brute-force attacks 
-• botnet infrastructure 
-• scanning activity 
-• known attacker infrastructure
+- brute-force attacks 
+- botnet infrastructure 
+- scanning activity 
+- known attacker infrastructure
 
 
 ## Findings
