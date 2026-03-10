@@ -15,8 +15,8 @@ Search authentication logs for repeated failed login attempts which may indicate
 
 Splunk Search:
 index=main sourcetype=syslog "Failed password"
-| rex "from\s+(?<src_ip>\d+\.\d+\.\d+\.\d+)"
-| stats count by src_ip
+| rex "from\s+(?<attacker_ip>\d+\.\d+\.\d+\.\d+)"
+| stats count by attacker_ip
 | sort -count
 
 Explanation:
