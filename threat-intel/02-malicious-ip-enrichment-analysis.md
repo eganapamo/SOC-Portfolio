@@ -1,4 +1,4 @@
-# Lab2 Malicious IP Enrichment Analysis
+# Lab 2 Malicious IP Enrichment Analysis
 
 ## Objective
 
