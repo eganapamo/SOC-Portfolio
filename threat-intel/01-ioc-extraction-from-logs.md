@@ -23,8 +23,8 @@ Use regex extraction to identify source IP addresses within the logs.
 
 Splunk Search:
 index=* sourcetype=syslog
-| rex "(?< src_ip >\d+\.\d+\.\d+\.\d+)"
-| stats count by src_ip
+| rex "(?< attacker_ip >\d+\.\d+\.\d+\.\d+)"
+| stats count by attacker_ip
 | sort -count
 
 Explanation:
