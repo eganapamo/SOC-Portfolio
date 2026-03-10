@@ -15,7 +15,7 @@ Search the logs for potential domains that appear in network activity.
 
 Splunk Search:
 index=*
-| rex "(?<domain>[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
+| rex "(?< domain >[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
 | stats count by domain
 | sort count
 
@@ -27,7 +27,7 @@ Domains with very low frequency may indicate suspicious activity such as phishin
 
 Splunk Search:
 index=*
-| rex "(?<domain>[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
+| rex "(?< domain >[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
 | stats count by domain
 | sort count
 
@@ -39,7 +39,7 @@ Remove null values to ensure only real domains are analyzed.
 
 Splunk Search:
 index=*
-| rex "(?<domain>[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
+| rex "(?< domain >[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
 | where isnotnull(domain)
 | stats count by domain
 | sort count
