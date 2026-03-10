@@ -1,130 +1,68 @@
-# lab 1– IOC Extraction From Logs
+# Lab 1 – IOC Extraction From Logs
 
 ## Objective
+The objective of this lab is to identify Indicators of Compromise (IOCs) such as IP addresses, domains, and file hashes from system logs. Extracting IOCs allows security analysts to quickly identify potentially malicious activity and investigate threats within an environment.
 
-Identify potential **Indicators of Compromise (IOCs)** from system authentication logs by extracting suspicious IP addresses, usernames, and activity patterns.
+## Environment
+- Splunk Enterprise
+- Kali Linux
+- Metasploitable
+- Linux syslog data
 
-The goal is to demonstrate how analysts extract threat indicators from logs and prepare them for **threat intelligence enrichment and correlation**.
+## Step 1 – Identify Indicators of Compromise in Logs
+Security analysts first search logs for potential indicators such as IP addresses, domains, or file hashes.
 
+Splunk Search:
+index=* sourcetype=syslog
 
-## Scenario
+Explanation:
+This search retrieves system log data where potential indicators may appear.
 
-Authentication logs contain multiple login attempts to a Linux system.
+## Step 2 – Extract IP Addresses
+Use regex extraction to identify source IP addresses within the logs.
 
-The objective is to:
-
-- Extract attacker IP addresses
-- Identify targeted usernames
-- Analyze login patterns
-- Determine potential brute-force activity
-
-These extracted indicators can later be enriched using **threat intelligence feeds**.
-
-
-## Data Source
-
-Index: main 
-Sourcetype: syslog 
-Source: Linux authentication logs
-
-These logs contain:
-
-- Failed SSH login attempts
-- Successful SSH logins
-- Source IP addresses
-- Targeted usernames
-
-
-## Step 1 – Identify Authentication Activity
-
-### Splunk Query
-
-index=main sourcetype=syslog ("Failed password" OR "Accepted password")
-
-### Purpose
-
-This search identifies authentication attempts within the system logs.
-
-
-## Step 2 – Extract Attacker IP Addresses
-
-### Splunk Query
-
-index=main sourcetype=syslog ("Failed password" OR "Accepted password")
-| rex "from\s+(?<attacker_ip>\d+\.\d+\.\d+\.\d+)"
-| stats count by attacker_ip
+Splunk Search:
+index=* sourcetype=syslog
+| rex "(?<src_ip>\d+\.\d+\.\d+\.\d+)"
+| stats count by src_ip
 | sort -count
 
-### Purpose
+Explanation:
+The rex command extracts IP addresses and the stats command counts how frequently each IP appears in the logs.
 
-This query extracts attacker IP addresses and counts the number of login attempts associated with each.
+## Step 3 – Extract Domain Indicators
+Domains may appear in logs when systems connect to external services.
 
+Splunk Search:
+index=* sourcetype=syslog
+| rex "(?<domain>[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
+| where isnotnull(domain)
+| stats count by domain
+| sort count
 
-## Step 3 – Extract Targeted Usernames
+Explanation:
+The regex extracts domain names from logs. Rare domains can sometimes indicate suspicious or malicious activity.
 
-### Splunk Query
+## Step 4 – Identify Rare or Suspicious Indicators
+Security analysts often focus on rare indicators because malicious infrastructure typically appears infrequently in logs.
 
-index=main sourcetype=syslog "Failed password"
-| rex "for\s+(invalid user\s+)?(?<username>\S+)"
-| stats count by username
-| sort -count
+Indicators of interest include:
+- Rare IP addresses
+- Rare domains
+- Unusual connection patterns
+- Indicators appearing during abnormal hours
 
-### Purpose
+## Step 5 – Investigate the Indicator
+Once an indicator is identified, the analyst investigates it using external threat intelligence sources.
 
-This search extracts usernames from failed login attempts to identify targeted accounts.
+Investigation tools include:
+- VirusTotal
+- AbuseIPDB
+- WHOIS lookup
+- Threat intelligence feeds
 
-
-## Step 4 – Correlate IP Addresses With Usernames
-
-### Splunk Query
-
-index=main sourcetype=syslog ("Failed password" OR "Accepted password")
-| rex "from\s+(?<attacker_ip>\d+\.\d+\.\d+\.\d+)"
-| rex "for\s+(invalid user\s+)?(?<username>\S+)"
-| stats count by attacker_ip username
-| sort -count
-
-### Purpose
-
-This correlation reveals attacker behavior patterns and targeted accounts.
-
-
-## Step 5 – Identify Potential Brute Force Activity
-
-### Splunk Query
-
-index=main sourcetype=syslog ("Failed password" OR "Accepted password")
-| rex "from\s+(?<attacker_ip>\d+\.\d+\.\d+\.\d+)"
-| eval status=if(searchmatch("Failed password"),"failed","success")
-| stats count(eval(status="failed")) as failed_attempts
-        count(eval(status="success")) as successful_attempts
-        by attacker_ip
-| where failed_attempts > 5
-
-### Purpose
-
-This identifies IP addresses that show signs of brute-force login activity.
-
-
-## Findings
-
-Analysis of authentication logs revealed:
-
-- Multiple failed login attempts targeting system accounts
-- Repeated login attempts from the same source IP address
-- Login patterns consistent with brute-force authentication attempts
-
-These indicators represent potential **Indicators of Compromise (IOCs)**.
-
+## Analyst Assessment
+Extracting indicators of compromise allows analysts to identify suspicious activity quickly. Indicators such as unknown IP addresses or rare domains should be investigated to determine whether they are associated with malicious infrastructure.
 
 ## Conclusion
-
-Threat intelligence analysis often begins with extracting IOCs directly from system logs.
-
-By identifying suspicious IP addresses and targeted usernames, analysts can generate indicators that can be enriched with external threat intelligence sources such as:
-
-- IP reputation databases
-- Threat intelligence feeds
-- Malware command and control infrastructure
-
-This process enables security teams to identify potential attackers and improve detection capabilities.
+This lab demonstrated how to extract indicators of compromise from logs using Splunk. IOC extraction is a critical step in threat hunting and incident response because it allows analysts to identify and investigate suspicious activity within a network environment.
