@@ -1,101 +1,83 @@
 # Lab 3 – Domain Reputation Investigation
 
 ## Objective
+The objective of this lab is to identify suspicious domains within log data and determine whether the domain may be malicious by performing threat intelligence reputation checks using external intelligence sources.
 
-Investigate suspicious domains observed in system logs by checking their reputation using threat intelligence platforms.
+## Environment
+- Splunk Enterprise
+- Kali Linux
+- Metasploitable
+- VirusTotal
+- WHOIS lookup tools
 
-The goal is to determine whether a domain is associated with malicious activity such as phishing, malware distribution, or command-and-control infrastructure.
+## Step 1 – Extract Domains From Logs
+Search the logs for potential domains that appear in network activity.
 
-
-## Scenario
-
-During log analysis, a domain was observed in system activity. Suspicious domains may indicate phishing campaigns, malware downloads, or communication with attacker infrastructure.
-
-Threat intelligence analysis is performed to determine whether the domain is associated with known malicious activity.
-
-Example domain indicator:
-
-suspicious-domain.example
-
-
-## Data Source
-
-Indicators extracted from system logs and network activity.
-
-Example log source:
-
-index=main 
-sourcetype=syslog
-
-Domains may appear in logs through:
-
-- web requests
-- command execution
-- malware communication
-- phishing activity
-
-
-## Step 1 – Search Logs for Domain Activity
-
-### Splunk Query
-
-index=main sourcetype=syslog
+Splunk Search:
+index=*
 | rex "(?<domain>[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
 | stats count by domain
-| sort -count
+| sort count
 
-### Purpose
+Explanation:
+The regex extracts domain names from logs and counts how often each domain appears.
 
-Extract domains appearing in system logs and identify potentially suspicious domains.
+## Step 2 – Identify Rare or Unusual Domains
+Domains with very low frequency may indicate suspicious activity such as phishing or command-and-control communications.
 
+Splunk Search:
+index=*
+| rex "(?<domain>[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
+| stats count by domain
+| sort count
 
-## Step 2 – Identify Suspicious Domain
+Explanation:
+Sorting by the lowest count allows analysts to quickly identify unusual or rare domains.
 
-Select domains that appear unusual or are associated with suspicious system behavior.
+## Step 3 – Filter Valid Domains
+Remove null values to ensure only real domains are analyzed.
 
-Example indicator:
+Splunk Search:
+index=*
+| rex "(?<domain>[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
+| where isnotnull(domain)
+| stats count by domain
+| sort count
 
-suspicious-domain.example
+Explanation:
+The "where isnotnull(domain)" command ensures that only extracted domains are displayed.
 
+## Step 4 – Investigate Suspicious Domains
+Choose a domain from the results and investigate it using threat intelligence platforms.
 
-## Step 3 – Perform Domain Reputation Lookup
+Investigation steps:
+1. Search the domain on VirusTotal
+2. Check domain age with WHOIS
+3. Review detection engines
+4. Look for known malware or phishing associations
 
-Investigate the domain using threat intelligence platforms.
+Example suspicious domain indicators:
+- Recently registered domains
+- Rare domains appearing only once
+- Domains flagged by multiple security engines
 
-Example sources:
+## Step 5 – Determine Risk Level
+Evaluate whether the domain is malicious or benign based on threat intelligence results.
 
-- VirusTotal 
-- AlienVault OTX 
+Indicators of malicious domains:
+- Multiple malware detections
+- Newly registered domains
+- Known phishing infrastructure
+- Command and control indicators
 
-These platforms provide information such as:
+## Analyst Assessment
+If the domain is flagged as malicious, further investigation should determine which hosts contacted the domain and what activity followed.
 
-- malware associations
-- phishing campaigns
-- command-and-control activity
-- domain reputation scores
-
-
-## Step 4 – Analyze Threat Intelligence Results
-
-Threat intelligence sources may reveal:
-
-- previous abuse reports
-- malware infrastructure connections
-- known phishing campaigns
-- suspicious hosting providers
-
-Analysts review these indicators to determine whether the domain is malicious.
-
-
-## Findings
-
-Threat intelligence investigation determined whether the domain had been previously associated with malicious infrastructure or suspicious activity.
-
-Domains with negative reputation scores or abuse reports may indicate malicious infrastructure.
-
+Recommended response:
+- Block the domain at the firewall or DNS level
+- Investigate affected hosts
+- Review user activity related to the domain
+- Monitor for additional suspicious network activity
 
 ## Conclusion
-
-Domain reputation investigation helps analysts determine whether system activity is associated with known malicious domains.
-
-Threat intelligence enrichment provides context that assists security teams in identifying phishing campaigns, malware infrastructure, and attacker communication channels.
+This lab demonstrated how to extract domain names from logs, identify suspicious domains based on frequency, and validate domain reputation using threat intelligence sources. Domain reputation analysis is an important technique used by SOC analysts to detect phishing infrastructure and command-and-control activity.
