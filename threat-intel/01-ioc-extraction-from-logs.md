@@ -23,7 +23,7 @@ Use regex extraction to identify source IP addresses within the logs.
 
 Splunk Search:
 index=* sourcetype=syslog
-| rex "(?<src_ip>\d+\.\d+\.\d+\.\d+)"
+| rex "(?< src_ip >\d+\.\d+\.\d+\.\d+)"
 | stats count by src_ip
 | sort -count
 
@@ -35,7 +35,7 @@ Domains may appear in logs when systems connect to external services.
 
 Splunk Search:
 index=* sourcetype=syslog
-| rex "(?<domain>[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
+| rex "(?< domain >[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
 | where isnotnull(domain)
 | stats count by domain
 | sort count
