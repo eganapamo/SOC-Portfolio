@@ -65,8 +65,6 @@ Example sources:
 
 - AbuseIPDB 
 - VirusTotal 
-- AlienVault OTX 
-- Cisco Talos Intelligence 
 
 These platforms provide information about known malicious infrastructure.
 
