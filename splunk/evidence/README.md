@@ -1,98 +1,68 @@
 # Splunk Evidence
 
-This folder contains screenshots of Splunk search results used as evidence for the detections and investigations documented in this repository.
+## Objective
 
-The screenshots demonstrate real log analysis performed in Splunk Enterprise, showing how security events were identified, correlated, and investigated.
+Demonstrate practical SIEM log analysis and detection development using Splunk.
 
-## Purpose
+The evidence in this folder supports the Splunk labs and shows the actual queries and results used to detect suspicious security activity.
 
-The evidence included in this folder demonstrates the ability to:
-
-- Analyze authentication logs
-- Detect brute force attacks
-- Investigate privilege escalation attempts
-- Identify suspicious command execution
-- Perform threat hunting using SIEM queries
-- Correlate events across multiple log entries
-
-Each screenshot represents actual search results from the Splunk queries written in the corresponding lab files.
-
-## Evidence Included
-
-### Brute Force Detection Evidence
-Shows multiple failed SSH login attempts followed by successful authentication from the same attacker IP.
-
-Evidence demonstrates:
-
-- attacker IP extraction
-- failed vs successful authentication counts
-- correlation of login events
-- compromised account identification
-
-### Privilege Escalation Detection Evidence
-Shows commands associated with privilege escalation such as:
-
-- sudo
-- su
-- chmod
-- user account modifications
-
-Evidence demonstrates:
-
-- command execution visibility
-- user attribution
-- host identification
-- command frequency analysis
-
-### Suspicious Command Execution Evidence
-Shows detection of potentially malicious command activity such as:
-
-- bash
-- python
-- sh
-- netcat (nc)
-
-Evidence demonstrates:
-
-- process execution visibility
-- attacker activity after authentication
-- command usage patterns
-
-### Correlation Search Evidence
-Demonstrates correlation logic used to detect attack patterns such as:
-
-- multiple failed logins
-- successful login from same IP
-- suspicious authentication behavior
-
-This type of detection is commonly used in Security Operations Centers to identify successful brute force compromises.
-
-### Notable Event Investigation Evidence
-Shows the investigation of a correlated security event including:
-
-- attacker IP
-- targeted user account
-- affected host
-- authentication statistics
-
-This demonstrates the ability to perform SOC-style event triage and investigation.
-
-## Skills Demonstrated
-
-This evidence demonstrates practical skills in:
-
-- SIEM log analysis
-- Security event correlation
-- Incident investigation
-- Detection engineering
-- Threat hunting
-
-## Tools Used
-
-- Splunk Enterprise
-- Linux syslog authentication logs
-- Custom Splunk Search Processing Language (SPL) queries
+The goal of these searches is to simulate how a Security Operations Center (SOC) analyst uses a SIEM to monitor logs, detect threats, and investigate potential incidents.
 
 
-This evidence supports the detection rules, investigations, and threat analysis documented throughout this SOC Analyst portfolio.
+## Steps Performed
 
+• Searched authentication and system logs using Splunk queries  
+
+• Extracted important fields from raw log data such as:
+- source IP
+- username
+- host
+- executed commands
+
+• Identified abnormal authentication patterns  
+
+• Correlated events across multiple log entries  
+
+• Detected security threats including:
+- brute force login attempts
+- privilege escalation activity
+- suspicious command execution
+
+• Investigated correlated events to determine potential compromise
+
+
+## Findings
+
+- Authentication logs contained multiple failed login attempts  
+
+- Successful logins occurred following repeated authentication failures  
+
+- Privilege escalation commands were observed within system logs  
+
+- Suspicious command execution activity was identified  
+
+- Correlation searches revealed attacker behavior patterns across events  
+
+- Evidence demonstrates how SIEM queries can detect malicious activity in system logs
+
+
+## Conclusion
+
+The Splunk queries and evidence demonstrate how security analysts detect and investigate threats using SIEM platforms.
+
+These searches show how log data can be used to identify authentication attacks, privilege escalation attempts, and suspicious command execution.
+
+This workflow reflects common monitoring and investigation practices performed in a Security Operations Center environment.
+
+
+## Evidence Files
+
+- 01 → Basic log search query  
+- 02 → Field extraction from log events  
+- 03 → Login failure dashboard analysis  
+- 04 → Brute force detection search results  
+- 05 → Privilege escalation detection evidence  
+- 06 → Suspicious IP alert query results  
+- 07 → Threat hunting search query  
+- 08 → Correlation search detection results  
+- 09 → Notable event investigation evidence
