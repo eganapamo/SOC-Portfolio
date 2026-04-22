@@ -20,12 +20,12 @@ Syslog
 | where ProcessName has "sshd"
 | extend Ip = extract(@"([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)", 1, SyslogMessage)
 | extend Status = case(
-    SyslogMessage has "Accepted password", "SUCCESS",
-    SyslogMessage has "Failed password", "FAILURE",
+    SyslogMessage has "Accepted", "SUCCESS",
+    SyslogMessage has "Connection closed", "FAILURE",
     "OTHER"
 )
 | where Ip == "196.117.187.168"
-| project TimeGenerated, Ip, Status
+| project TimeGenerated, Ip, Status, SyslogMessage
 | sort by TimeGenerated desc
 
 ## Findings:
