@@ -10,7 +10,7 @@ Syslog (Linux auth logs via Azure Sentinel)
 Syslog
 | where Facility in ("auth", "authpriv")
 | where ProcessName has "sshd"
-| where SyslogMessage has "Failed password"
+| where SyslogMessage has "Connection closed"
 | extend Ip = extract(@"([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)", 1, SyslogMessage)
 | summarize FailedAttempts = count() by Ip
 | where FailedAttempts > 5
@@ -22,8 +22,8 @@ Syslog
 | extend Ip = extract(@"([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)", 1, SyslogMessage)
 | extend User = extract(@"user (\w+)", 1, SyslogMessage)
 | extend Status = case(
-    SyslogMessage has "Accepted password", "SUCCESS",
-    SyslogMessage has "Failed password", "FAILURE",
+    SyslogMessage has "Accepted", "SUCCESS",
+    SyslogMessage has "Connection closed", "FAILURE",
     "OTHER"
 )
 | where Ip == "196.117.187.168"
