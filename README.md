@@ -16,6 +16,7 @@ This repository showcases hands-on cybersecurity labs demonstrating practical Se
 | Splunk | SIEM analysis & hunting |
 | Threat-Intel | Intelligence workflows |
 | Vuln-Management | Risk & remediation analysis |
+| Azure-Sentinel | Investigations |
 
 
 ## Core Skills Demonstrated
